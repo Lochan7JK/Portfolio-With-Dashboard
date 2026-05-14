@@ -234,7 +234,10 @@ Designed with inspiration from:
 
 # 📸 Screenshots
 
-> Add screenshots/gifs of your portfolio and dashboard here.
+<img width="2701" height="1570" alt="Screenshot 2026-04-21 213326" src="https://github.com/user-attachments/assets/3531afdc-557a-468a-9c91-bcf8821b9282" />
+<img width="2731" height="1572" alt="Screenshot 2026-05-14 155714" src="https://github.com/user-attachments/assets/85146159-078a-4c45-9852-f050c71a6130" />
+<img width="2730" height="1582" alt="Screenshot 2026-05-14 155603" src="https://github.com/user-attachments/assets/b0f22fd1-24b3-406c-91f6-8dc0d6a0e2c2" />
+
 
 Suggested sections:
 
@@ -244,73 +247,6 @@ Suggested sections:
 * Contact Inbox
 * Analytics Dashboard
 * Mobile Responsive View
-
----
-
-# ⚙️ Installation
-
-## 1️⃣ Clone Repository
-
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-```
-
----
-
-## 2️⃣ Install Frontend Dependencies
-
-```bash
-cd client
-npm install
-```
-
----
-
-## 3️⃣ Install Backend Dependencies
-
-```bash
-cd server
-npm install
-```
-
----
-
-# 🔑 Environment Variables
-
-## Frontend `.env`
-
-```env
-VITE_API_URL=
-VITE_GOOGLE_CLIENT_ID=
-```
-
----
-
-## Backend `.env`
-
-```env
-PORT=
-DATABASE_URL=
-JWT_SECRET=
-GOOGLE_CLIENT_ID=
-RESEND_API_KEY=
-```
-
----
-
-# ▶️ Run Locally
-
-## Frontend
-
-```bash
-npm run dev
-```
-
-## Backend
-
-```bash
-nodemon index.js
-```
 
 ---
 
@@ -363,7 +299,10 @@ Full Stack Developer passionate about building modern web experiences, solving p
 * Email
 * Twitter/X
 
-(Add your links here)
+https://www.linkedin.com/in/lochan-singoria-503347243/
+https://github.com/Lochan7JK/
+lochansingoria@gmail.com
+https://x.com/LochanSing13646
 
 ---
 
