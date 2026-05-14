@@ -19,8 +19,18 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://your-frontend-name.onrender.com",
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
+
 
 // Routes
 // ✅ PUBLIC routes (NO middleware)
@@ -46,6 +56,10 @@ app.use(trackVisitor); // Track all visitors (should be last to avoid blocking r
 
 // Server
 const PORT = process.env.PORT || 5000;
+
+app.get("/", (req, res) => {
+  res.send("Portfolio Backend Running 🚀");
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
