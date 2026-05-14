@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+/* 🎨 Theme (replacement for tailwind.config.js) */
+@theme {
+  --font-silkscreen: "Silkscreen", sans-serif;
+  --font-chakra: "Chakra Petch", sans-serif;
+  --font-custom: "Open Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --color-primary: #00ADB5;
+  --color-dark: #222831;
+  --color-light: #EEEEEE;
+  --color-accent: #AFFFFF;
+}
+
+/* ✅ Reusable utility classes */
+@layer utilities {
+  .font-silkscreen {
+    font-family: var(--font-silkscreen);
+  }
+
+  .font-chakra {
+    font-family: var(--font-chakra);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.swiper {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+.swiper-slide {
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-wave {
+  animation: waveMove 12s linear infinite;
+}
+
+@keyframes waveSlow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes waveFast {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Different speeds */
+.animate-waveSlow {
+  animation: waveSlow 18s linear infinite;
+}
+
+.animate-waveFast {
+  animation: waveFast 10s linear infinite;
+}
+
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  /* width: 300px;
+  display: flex;
+  justify-content: center; */
+  transition: all 0.4s ease;
+  opacity: 0.4;
+  transform: scale(0.85);
+  filter: blur(2px);
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0px);
+}
+
+.glow-text {
+  background: linear-gradient(90deg, #00ADB5, #AFFFFF, #00ADB5);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: glowMove 3s linear infinite;
+}
+
+.glow-text-2 {
+  background: linear-gradient(90deg, #00ADB5, #AFFFFF, #ffffff);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: glowMove 3s linear infinite;
+}
+
+@keyframes glowMove {
+  0% { background-position: 0% }
+  100% { background-position: 200% }
+}
+
+/* body {
+  scroll-behavior: smooth;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #191919;
+}
