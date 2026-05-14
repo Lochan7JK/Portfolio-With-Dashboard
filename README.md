@@ -294,15 +294,11 @@ Full Stack Developer passionate about building modern web experiences, solving p
 
 # 📬 Contact
 
-* LinkedIn
-* GitHub
-* Email
-* Twitter/X
+* LinkedIn - https://www.linkedin.com/in/lochan-singoria-503347243/
+* GitHub - https://github.com/Lochan7JK/
+* Email - lochansingoria@gmail.com
+* Twitter/X - https://x.com/LochanSing13646
 
-https://www.linkedin.com/in/lochan-singoria-503347243/
-https://github.com/Lochan7JK/
-lochansingoria@gmail.com
-https://x.com/LochanSing13646
 
 ---
 
