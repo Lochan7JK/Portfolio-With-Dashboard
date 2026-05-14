@@ -1,6 +1,6 @@
 # 🚀 Dynamic Developer Portfolio & Admin Dashboard
 
-A modern **full-stack MERN portfolio platform** with a fully dynamic admin dashboard, visitor analytics, contact management system, Google OAuth authentication, and responsive cyberpunk-inspired UI.
+A modern **full-stack portfolio platform** with a fully dynamic admin dashboard, visitor analytics, contact management system, Google OAuth authentication, and responsive cyberpunk-inspired UI.
 
 Built to showcase projects, skills, and creativity while also functioning as a complete content management system for the portfolio owner.
 
@@ -146,6 +146,7 @@ Tables used:
 The application is optimized for:
 
 * Desktop
+* Laptop
 * Tablet
 * Mobile Devices
 
@@ -351,7 +352,7 @@ Planned upgrades:
 
 ## Lochan Singoria
 
-Aspiring Full Stack Developer passionate about building modern web experiences, solving problems, and continuously learning new technologies.
+Full Stack Developer passionate about building modern web experiences, solving problems, and continuously learning new technologies.
 
 ---
 
