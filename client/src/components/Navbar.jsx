@@ -85,8 +85,8 @@ function Navbar() {
             className={`relative cursor-pointer transition-all duration-300 
               ${
                 active === item.id
-                  ? "text-[#00ADB5]"
-                  : "text-white hover:text-[#00ADB5]"
+                  ? "text-primary]"
+                  : "text-white hover:text-primary"
               }
             `}
 
@@ -98,7 +98,7 @@ function Navbar() {
             //     }
             // `}
           >
-            <span className="absolute right-3 bottom-0 w-0 h-[2px] text-xs bg-[#00ADB5] transition-all duration-300 group-hover:w-full">
+            <span className="absolute right-3 bottom-0 w-0 h-[2px] text-xs bg-primary transition-all duration-300 group-hover:w-full">
                 {String(index + 1).padStart(2, "0")}
             </span>
 
@@ -110,7 +110,7 @@ function Navbar() {
 
             {/* Underline */}
             <span
-                className={`absolute left-0 h-[2px] bg-[#00ADB5] transition-all duration-300 ${
+                className={`absolute left-0 h-[2px] bg-primary transition-all duration-300 ${
                 active === item.id
                     ? "w-full shadow-[0_0_10px_#00ADB5]"
                     : "w-0 group-hover:w-full"
