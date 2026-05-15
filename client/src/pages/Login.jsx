@@ -19,8 +19,9 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    try {
-      const res = await axios.post("http://localhost:5000/auth/login", {
+    try { 
+      // const res = await axios.post("http://localhost:5000/auth/login", {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/auth/login`, {
         email,
         password,
       });
@@ -43,7 +44,8 @@ export default function Login() {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/auth/google",
+        // "http://localhost:5000/auth/google",
+        `${import.meta.env.VITE_API_URL}/auth/google`,
         {
           credential: credentialResponse.credential,
         }
@@ -134,7 +136,7 @@ export default function Login() {
 
       {/* Google Login Button */}
         <div
-         className="w-78 overflow-hidden rounded-xl border border-white/10 hover:border-[#00ADB5] transition-all duration-300">
+         className="w-78 overflow-hidden rounded-xl border border-white/10 hover:border-primary transition-all duration-300">
           <GoogleLogin
             onSuccess={handleGoogleSuccess}
             onError={() => console.log("Google Login Failed")}
