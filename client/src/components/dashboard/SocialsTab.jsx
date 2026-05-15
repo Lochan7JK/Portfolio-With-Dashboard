@@ -12,7 +12,8 @@ function SocialsTab() {
         const fetchSocials = async () => {
             try {
             const res = await axios.get(
-                "http://localhost:5000/social-links"
+                // "http://localhost:5000/social-links"
+                `${import.meta.env.VITE_API_URL}/social-links`
             );
 
             setSocials(res.data);
@@ -80,7 +81,8 @@ function SocialsTab() {
                 onClick={async () => {
 
                     await axios.put(
-                    `http://localhost:5000/social-links/${s.id}`,
+                    // `http://localhost:5000/social-links/${s.id}`,
+                    `${import.meta.env.VITE_API_URL}/social-links/${s.id}`,
                     s,
                     {
                         headers: {
@@ -92,7 +94,7 @@ function SocialsTab() {
                     // alert("Updated");
                     toast.success("Social icons updated");
                 }}
-                className="bg-[#00ADB5] py-2 rounded"
+                className="bg-primary py-2 rounded"
                 >
                 Save
                 </button>
