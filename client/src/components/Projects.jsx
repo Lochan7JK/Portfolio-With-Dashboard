@@ -38,7 +38,8 @@ function Projects() {
     const fetchProjects = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/minor-projects"
+          // "http://localhost:5000/minor-projects"
+          `${import.meta.env.VITE_API_URL}/projects`
         );
 
         setProjects(res.data);
@@ -141,7 +142,7 @@ function Projects() {
             Projects
 
             {/* underline */}
-            <span className="absolute left-4 top-6 w-full h-[16px] -z-5 bg-[#00ADB5]"></span>
+            <span className="absolute left-4 top-6 w-full h-[16px] -z-5 bg-primary"></span>
             
           </h1>
         </div>
@@ -290,13 +291,13 @@ function Projects() {
                 </div> */}
 
                 <div className="swiper-button-prev !left-0 !text-white">
-                  <div className="bg-[#00ADB5]/20 backdrop-blur-md p-3 rounded-full hover:bg-[#00ADB5] transition shadow-lg">
+                  <div className="bg-primary/20 backdrop-blur-md p-3 rounded-full hover:bg-primary transition shadow-lg">
                     <FaArrowLeft />
                   </div>
                 </div>
 
                 <div className="swiper-button-next !right-0 !text-white">
-                  <div className="bg-[#00ADB5]/20 backdrop-blur-md p-3 rounded-full hover:bg-[#00ADB5] transition shadow-lg">
+                  <div className="bg-primary/20 backdrop-blur-md p-3 rounded-full hover:bg-primary transition shadow-lg">
                     <FaArrowRight />
                   </div>
                 </div>
