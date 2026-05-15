@@ -58,15 +58,15 @@ function SkillCard({ image, name, delay }) {
         }}
         
         className="h-[90px] w-full rounded-md border-2 border-transparent 
-                  bg-gradient-to-r from-[#EEEEEE] via-[#00ADB5] to-[#393E46] 
+                  bg-gradient-to-r from-light via-primary to-[#393E46] 
                   p-[2px]"
       >
 
       
 
-      <div className="bg-[#222831] h-full flex flex-col items-center justify-center rounded-md">
+      <div className="bg-dark h-full flex flex-col items-center justify-center rounded-md">
         <img src={image} alt={name} className="h-[40px] mb-1" />
-        <p className="text-[#EEEEEE] text-sm">{name}</p>
+        <p className="text-light text-sm">{name}</p>
       </div>
     </motion.div>
   );
