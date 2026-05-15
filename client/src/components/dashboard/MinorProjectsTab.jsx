@@ -21,7 +21,8 @@ function MinorProjectsTab() {
     // 🔹 Fetch practice projects 
     const fetchMinorProjects = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/minor-projects");
+            // const res = await axios.get("http://localhost:5000/minor-projects");
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/minor-projects`);
             setMinorProjects(res.data);
         } catch (err) {
             console.log(err);
@@ -48,7 +49,8 @@ function MinorProjectsTab() {
             if (editingMinorId) {
 
             await axios.put(
-                `http://localhost:5000/minor-projects/${editingMinorId}`,
+                // `http://localhost:5000/minor-projects/${editingMinorId}`,
+                `${import.meta.env.VITE_API_URL}/minor-projects/${editingMinorId}`,
                 minorForm,
                 {
                 headers: {
@@ -60,7 +62,8 @@ function MinorProjectsTab() {
             } else {
 
             await axios.post(
-                "http://localhost:5000/minor-projects",
+                // "http://localhost:5000/minor-projects",
+                `${import.meta.env.VITE_API_URL}/minor-projects`,
                 minorForm,
                 {
                 headers: {
@@ -89,7 +92,8 @@ function MinorProjectsTab() {
     const deleteMinorProject = async (id) => {
         try {
             await axios.delete(
-            `http://localhost:5000/minor-projects/${id}`,
+            // `http://localhost:5000/minor-projects/${id}`,
+            `${import.meta.env.VITE_API_URL}/minor-projects/${id}`,
             {
                 headers: {
                 Authorization: `Bearer ${token}`
