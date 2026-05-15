@@ -27,7 +27,8 @@ function About() {
   useEffect(() => {
     const fetchAbout = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/about");
+        // const res = await axios.get("http://localhost:5000/about");
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/about`);
         setAbout(res.data);
       } catch (err) {
         console.log("Error fetching about:", err);
@@ -61,7 +62,7 @@ function About() {
         About
 
         {/* underline */}
-        <span className="absolute left-4 top-6 w-full h-[16px] -z-5 bg-[#00ADB5]"></span>
+        <span className="absolute left-4 top-6 w-full h-4 -z-5 bg-primary"></span>
         
       </h1>
     </div>
@@ -162,13 +163,13 @@ function About() {
           </svg>
 
           {/* Text before: font-chakra*/}
-          <p className="text-[#EEEEEE] text-sm md:text-base font-poppins max-w-md">
+          <p className="text-light text-sm md:text-base font-poppins max-w-md">
             {/* I’m a full-stack developer skilled in MERN and PERN stacks, passionate about building responsive and efficient web applications. */}
             {about.intro}
           </p>
 
           {about.description.split("\n").map((line, i) => (
-            <p key={i} className="text-[#EEEEEE] text-sm md:text-base font-poppins max-w-md">
+            <p key={i} className="text-light text-sm md:text-base font-poppins max-w-md">
               {line}
             </p>
           ))}
@@ -192,7 +193,7 @@ function About() {
             target="_blank"
             rel="noopener noreferrer"
             >
-            <button className="bg-[#00ADB5] text-white/90 rounded-md hover:opacity-80 px-5 py-3 mt-1">
+            <button className="bg-primary text-white/90 rounded-md hover:opacity-80 px-5 py-3 mt-1">
                 View Resume
             </button>
             </a>
@@ -231,14 +232,14 @@ function About() {
         >
         
             {/* Column 1 (gap-4 w-1/4) */}
-            <div className="flex flex-col gap-6 w-[120px] mt-14">
+            <div className="flex flex-col gap-6 w-30 mt-14">
                 <SkillCard image={html} name="HTML"  delay={0.2}/>
                 <SkillCard image={css} name="CSS" delay={0.8}/>
                 <SkillCard image={js} name="JAVASCRIPT" delay={0.4}/>
             </div>
 
             {/* Column 2 */}
-            <div className="flex flex-col gap-6 w-[120px]">
+            <div className="flex flex-col gap-6 w-30 mt-14">
                 <SkillCard image={mongodb} name="MONGODB" delay={0.6}/>
                 <SkillCard image={express} name="EXPRESS.JS" delay={1.0}/>
                 <SkillCard image={react} name="REACT" delay={0.3}/>
@@ -246,7 +247,7 @@ function About() {
             </div>
 
             {/* Column 3 */}
-            <div className="flex flex-col gap-6 w-[120px] mt-14">
+            <div className="flex flex-col gap-6 w-30 mt-14">
                 <SkillCard image={cpp} name="C++" delay={0.5}/>
                 <SkillCard image={java} name="JAVA" delay={1.1}/>
                 <SkillCard image={postgresql} name="POSTGRESQL" delay={0.7}/>
