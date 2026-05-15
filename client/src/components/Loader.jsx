@@ -67,10 +67,10 @@ function Loader({ text }) {
         className="relative flex flex-col items-center"
       >
         {/* Glow */}
-        <div className="absolute w-40 h-40 bg-[#00ADB5] blur-3xl opacity-40 animate-pulse rounded-full"></div>
+        <div className="absolute w-40 h-40 bg-primary blur-3xl opacity-40 animate-pulse rounded-full"></div>
 
         {/* Rotating Ring */}
-        <div className="w-24 h-24 border-2 border-t-[#00ADB5] border-white/10 rounded-full animate-spin"></div>
+        <div className="w-24 h-24 border-2 border-t-primary border-white/10 rounded-full animate-spin"></div>
 
         {/* Text */}
         <p className="mt-6 text-gray-300 tracking-widest animate-pulse">
