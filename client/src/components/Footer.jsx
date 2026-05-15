@@ -61,7 +61,8 @@ function Footer() {
         const fetchSocials = async () => {
             try {
             const res = await axios.get(
-                "http://localhost:5000/social-links"
+                // "http://localhost:5000/social-links"
+                `${import.meta.env.VITE_API_URL}/social-links`
             );
 
             setSocials(res.data);
@@ -104,7 +105,7 @@ function Footer() {
   // <footer className="relative z-10 px-6 py-9 text-gray-400 border-t border-white/10 backdrop-blur-md bg-white/5">
   <footer className="relative z-10 px-6 py-9 text-gray-400 border-t border-white/10">
 
-    <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00ADB5] to-transparent opacity-50" />
+    <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
 
       {/* 🌊 Wave */}
     {/* <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
