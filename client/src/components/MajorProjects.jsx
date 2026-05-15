@@ -41,7 +41,8 @@ function MajorProjects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/projects");
+        // const res = await axios.get("http://localhost:5000/projects");
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/projects`);
         setProjects(res.data);
       } catch (err) {
         console.log("Error fetching projects:", err);
@@ -98,7 +99,7 @@ function MajorProjects() {
             <div className="flex flex-wrap gap-4 pl-7 pt-1">
               <a
                 href={project.live_url}
-                className="px-4 py-2 bg-[#00ADB5] text-white/90 rounded-md hover:opacity-80 font-poppins"
+                className="px-4 py-2 bg-primary text-white/90 rounded-md hover:opacity-80 font-poppins"
                 target="_blank"
               >
                 live_url
