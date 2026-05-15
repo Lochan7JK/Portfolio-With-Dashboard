@@ -19,7 +19,8 @@ function AboutTab() {
     // 🔹 Fetch about
     const fetchAbout = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/about");
+            // const res = await axios.get("http://localhost:5000/about");
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/about`);
             setAbout(res.data);
         } catch (err) {
             console.log(err);
@@ -36,7 +37,8 @@ function AboutTab() {
 
     const handleAboutUpdate = async () => {
         try {
-            await axios.put("http://localhost:5000/about", about, {
+            // await axios.put("http://localhost:5000/about", about, {
+            await axios.put(`${import.meta.env.VITE_API_URL}/about`, about, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
