@@ -14,8 +14,8 @@ import SkillCard from "./SkillCard";
 // import cpp from "../assets/images/cpp.png";
 // import java from "../assets/images/java.png";
 // import postgresql from "../assets/images/postgresql.png";
-
 import { motion } from "framer-motion";
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -233,24 +233,25 @@ function About() {
         
             {/* Column 1 (gap-4 w-1/4) */}
             <div className="flex flex-col gap-6 w-30 mt-14">
-                <SkillCard image={html} name="HTML"  delay={0.2}/>
-                <SkillCard image={css} name="CSS" delay={0.8}/>
-                <SkillCard image={js} name="JAVASCRIPT" delay={0.4}/>
+              {/* image={html} */}
+                <SkillCard image="/images/html.png" name="HTML"  delay={0.2}/>
+                <SkillCard image="/images/css.png" name="CSS" delay={0.8}/>
+                <SkillCard image="/images/js.png" name="JAVASCRIPT" delay={0.4}/>
             </div>
 
             {/* Column 2 */}
             <div className="flex flex-col gap-6 w-30 mt-14">
-                <SkillCard image={mongodb} name="MONGODB" delay={0.6}/>
-                <SkillCard image={express} name="EXPRESS.JS" delay={1.0}/>
-                <SkillCard image={react} name="REACT" delay={0.3}/>
-                <SkillCard image={node} name="NODE.JS" delay={0.9}/>
+                <SkillCard image="/images/mongodb.png" name="MONGODB" delay={0.6}/>
+                <SkillCard image="/images/espressjs.png" name="EXPRESS.JS" delay={1.0}/>
+                <SkillCard image="/images/react.png" name="REACT" delay={0.3}/>
+                <SkillCard image="/images/nodejs.png" name="NODE.JS" delay={0.9}/>
             </div>
 
             {/* Column 3 */}
             <div className="flex flex-col gap-6 w-30 mt-14">
-                <SkillCard image={cpp} name="C++" delay={0.5}/>
-                <SkillCard image={java} name="JAVA" delay={1.1}/>
-                <SkillCard image={postgresql} name="POSTGRESQL" delay={0.7}/>
+                <SkillCard image="/images/cpp.png" name="C++" delay={0.5}/>
+                <SkillCard image="/images/java.png" name="JAVA" delay={1.1}/>
+                <SkillCard image="/images/postgresql.png" name="POSTGRESQL" delay={0.7}/>
             </div>
 
         </motion.div>
