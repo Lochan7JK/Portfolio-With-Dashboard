@@ -15,7 +15,8 @@ function FloatingSocials() {
       try {
 
         const res = await axios.get(
-          "http://localhost:5000/social-links"
+          // "http://localhost:5000/social-links"
+          `${import.meta.env.VITE_API_URL}/social-links`
         );
 
         setSocials(res.data);
