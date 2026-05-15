@@ -123,7 +123,8 @@ useEffect(() => {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/hero"
+        // "http://localhost:5000/hero"
+        `${import.meta.env.VITE_API_URL}/hero`
       );
 
       setHero(res.data);
@@ -232,7 +233,7 @@ useEffect(() => {
       <div className="text-center z-10 relative px-4">
         <h1 className="text-white text-4xl md:text-6xl">
           Hello, I'm 
-          <span className="text-[#AFFFFF] glow-text">
+          <span className="text-accent glow-text">
             {/* Lochan */}
             {hero?.name}
           </span>
@@ -295,7 +296,7 @@ useEffect(() => {
             speed={40}
             deletionSpeed={60}
             repeat={Infinity}
-            className="text-white mt-4 text-xl block font-silkscreen hover:text-[#AFFFFF]"
+            className="text-white mt-4 text-xl block font-silkscreen hover:text-accent"
           />
 
         )}
@@ -309,7 +310,7 @@ useEffect(() => {
                     shadow-[0_0_10px_#00ADB5] hover:shadow-[0_0_4px_#00ADB5]" */}
         
         <button
-          className="mt-6 px-6 py-3 border border-[#AFFFFF]/70 hover:border-[#00ADB5] text-white/90 rounded-md relative overflow-hidden group"
+          className="mt-6 px-6 py-3 border border-accent/70 hover:border-primary text-white/90 rounded-md relative overflow-hidden group"
           onMouseMove={(e) => {
             const rect = e.currentTarget.getBoundingClientRect();
             const x = e.clientX - rect.left;
@@ -331,7 +332,7 @@ useEffect(() => {
           {/* Magnetic glow */}
           <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition">
             <span
-              className="absolute w-40 h-40 bg-[#00ADB5]/30 rounded-full blur-2xl"
+              className="absolute w-40 h-40 bg-primary/30 rounded-full blur-2xl"
               style={{
                 left: "var(--x)",
                 top: "var(--y)",
@@ -348,12 +349,12 @@ useEffect(() => {
        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10 cursor-pointer transition-all duration-300 hover:scale-110">
   
           {/* Mouse shape */}
-          <div className="w-8 h-14 border-2 border-white/60 rounded-full flex justify-center items-start p-1 backdrop-blur-sm hover:border-[#AFFFFF]">
-            <div className="w-1 h-2 bg-white/60 rounded-full animate-scroll hover:border-[#AFFFFF]"></div>
+          <div className="w-8 h-14 border-2 border-white/60 rounded-full flex justify-center items-start p-1 backdrop-blur-sm hover:border-accent">
+            <div className="w-1 h-2 bg-white/60 rounded-full animate-scroll hover:border-accent"></div>
           </div>
 
           {/* Arrow */}
-          <div className="text-[#00ADB5] text-xl animate-bounce">
+          <div className="text-primary text-xl animate-bounce">
             ↓
           </div>
 
