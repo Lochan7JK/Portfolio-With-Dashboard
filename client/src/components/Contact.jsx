@@ -98,7 +98,8 @@ function Contact() {
       setLoading(true);
 
       try {
-        const response = await fetch("http://localhost:5000/api/contact", {
+        // const response = await fetch("http://localhost:5000/api/contact", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -196,12 +197,12 @@ function Contact() {
             Get in Touch
 
             {/* underline */}
-            <span className="absolute left-4 top-6 w-full h-[16px] -z-5 bg-[#00ADB5]"></span>
+            <span className="absolute left-4 top-6 w-full h-4 -z-5 bg-primary"></span>
             
           </h1>
         </div>
 
-        <p className="text-[#EEEEEE] font-poppins -mt-4">
+        <p className="text-light font-poppins -mt-4">
           Have any question? Want to work together? Drop me a query or Leave your message.
         </p>
       </div>
@@ -213,7 +214,7 @@ function Contact() {
           className="bg-white w-full max-w-md p-8 rounded-md shadow-lg relative transition duration-300"
         >
           {/* Icon */}
-          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-full shadow-md text-[#00ADB5] hover:text-[#00ADB5]/85 text-2xl">
+          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-full shadow-md text-primary hover:text-primary/85 text-2xl">
           {/* text-[#009e7a] */}
              <i class="fas fa-paper-plane"></i>
              {/* ✈️ */}
@@ -303,7 +304,7 @@ function Contact() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-[#00ADB5] text-white px-6 py-2 rounded-md block mt-6 mx-auto flex items-center justify-center gap-2 hover:opacity-85 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-primary text-white px-6 py-2 rounded-md block mt-6 mx-auto flex items-center justify-center gap-2 hover:opacity-85 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             // hover:bg-[#019ca3], bg-[#009e7a]
           >
             {loading && (
