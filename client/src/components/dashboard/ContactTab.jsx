@@ -49,7 +49,8 @@ export default function ContactTab({ contacts, setContacts, fetchContacts }) {
     try {
 
       await axios.put(
-        `http://localhost:5000/dashboard/contacts/${id}/read`,
+        // `http://localhost:5000/dashboard/contacts/${id}/read`,
+        `${import.meta.env.VITE_API_URL}/dashboard/contacts/${id}/read`,
         {},
         {
           headers: {
@@ -59,8 +60,6 @@ export default function ContactTab({ contacts, setContacts, fetchContacts }) {
       );
 
       fetchContacts();
-
-      setSelectedMessage(null);
 
       setSelectedMessage({
         ...selectedMessage,
@@ -79,7 +78,8 @@ export default function ContactTab({ contacts, setContacts, fetchContacts }) {
     try {
 
       await axios.put(
-        `http://localhost:5000/dashboard/contacts/${id}/star`,
+        // `http://localhost:5000/dashboard/contacts/${id}/star`,
+        `${import.meta.env.VITE_API_URL}/dashboard/contacts/${id}/star`,
         {},
         {
           headers: {
@@ -271,7 +271,8 @@ export default function ContactTab({ contacts, setContacts, fetchContacts }) {
                         onClick={async () => {
                             try {
 
-                            await axios.delete(`http://localhost:5000/dashboard/contacts/${selectedMessage.id}`,
+                            // await axios.delete(`http://localhost:5000/dashboard/contacts/${selectedMessage.id}`,
+                            await axios.delete(`${import.meta.env.VITE_API_URL}/dashboard/contacts/${selectedMessage.id}`,
                                 {
                                 headers: {
                                     Authorization: `Bearer ${token}`,
