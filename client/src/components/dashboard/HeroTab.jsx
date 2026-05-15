@@ -20,7 +20,8 @@ function HeroTab() {
         try {
 
             const res = await axios.get(
-            "http://localhost:5000/hero"
+            // "http://localhost:5000/hero"
+            `${import.meta.env.VITE_API_URL}/hero`
             );
 
             setHero(res.data);
@@ -39,7 +40,8 @@ function HeroTab() {
         try {
 
             await axios.put(
-            "http://localhost:5000/hero",
+            // "http://localhost:5000/hero",
+            `${import.meta.env.VITE_API_URL}/hero`,
             hero,
             {
                 headers: {
