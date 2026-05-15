@@ -1,17 +1,17 @@
 // src/components/Projects.jsx
 
-import snake from "../assets/images/snake-game.png";
-import sudoku from "../assets/images/sudoku.png";
-import rps1 from "../assets/images/rock-paper-scissors-1.png";
-import weather from "../assets/images/weather-app.png";
-import mole from "../assets/images/whack-a-mole.png";
-import simon from "../assets/images/simon-game.png";
-import drum from "../assets/images/drum-kit.png";
-import dice from "../assets/images/dice-game.png";
-import calc from "../assets/images/calculator.png";
-import rps from "../assets/images/rock-paper-scissors.png";
-import ttt from "../assets/images/tic-tac-toe.png";
-import quiz from "../assets/images/quiz-app.png";
+// import snake from "../assets/images/snake-game.png";
+// import sudoku from "../assets/images/sudoku.png";
+// import rps1 from "../assets/images/rock-paper-scissors-1.png";
+// import weather from "../assets/images/weather-app.png";
+// import mole from "../assets/images/whack-a-mole.png";
+// import simon from "../assets/images/simon-game.png";
+// import drum from "../assets/images/drum-kit.png";
+// import dice from "../assets/images/dice-game.png";
+// import calc from "../assets/images/calculator.png";
+// import rps from "../assets/images/rock-paper-scissors.png";
+// import ttt from "../assets/images/tic-tac-toe.png";
+// import quiz from "../assets/images/quiz-app.png";
 import ProjectCard from "./ProjectCard";
 import MajorProjects from "./MajorProjects";
 import { motion } from "framer-motion";
