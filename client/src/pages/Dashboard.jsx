@@ -230,7 +230,8 @@ export default function Dashboard() {
         try {
 
         const res = await axios.get(
-            "http://localhost:5000/dashboard/contacts",
+            // "http://localhost:5000/dashboard/contacts",
+            `${import.meta.env.VITE_API_URL}/dashboard/contacts`,
             {
             headers: {
                 Authorization: `Bearer ${token}`,
