@@ -24,7 +24,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://your-frontend-name.onrender.com",
+      "https://portfolio-with-dashboard-frontend.onrender.com",
     ],
     credentials: true,
   })
