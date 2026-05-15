@@ -3,19 +3,19 @@
 import SkillCard from "./SkillCard";
 
 // import images
-import html from "../assets/images/html.png";
-import css from "../assets/images/css.png";
-import js from "../assets/images/js.png";
-import mongodb from "../assets/images/mongodb.png";
-import express from "../assets/images/espressjs.png";
-import react from "../assets/images/react.png";
-import node from "../assets/images/nodejs.png";
-import c from "../assets/images/c.png";
-import cpp from "../assets/images/cpp.png";
-import java from "../assets/images/java.png";
-import postgresql from "../assets/images/postgresql.png";
-import { motion } from "framer-motion";
+// import html from "../assets/images/html.png";
+// import css from "../assets/images/css.png";
+// import js from "../assets/images/js.png";
+// import mongodb from "../assets/images/mongodb.png";
+// import express from "../assets/images/espressjs.png";
+// import react from "../assets/images/react.png";
+// import node from "../assets/images/nodejs.png";
+// import c from "../assets/images/c.png";
+// import cpp from "../assets/images/cpp.png";
+// import java from "../assets/images/java.png";
+// import postgresql from "../assets/images/postgresql.png";
 
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
