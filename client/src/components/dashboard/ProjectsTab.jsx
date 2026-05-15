@@ -22,7 +22,8 @@ function ProjectsTab() {
     // 🔹 Fetch projects 
     const fetchProjects = async () => {
         try {
-        const res = await axios.get("http://localhost:5000/projects");
+        // const res = await axios.get("http://localhost:5000/projects");
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/projects`);
         setProjects(res.data);
         } catch (err) {
         console.log(err);
@@ -45,7 +46,8 @@ function ProjectsTab() {
             if (editingId) {
             // UPDATE
             await axios.put(
-                `http://localhost:5000/projects/${editingId}`,
+                // `http://localhost:5000/projects/${editingId}`,
+                `${import.meta.env.VITE_API_URL}/projects/${editingId}`,
                 {
                 ...form,
                 tech_stack: form.tech_stack.split(","),
@@ -59,7 +61,8 @@ function ProjectsTab() {
             } else {
             // ADD
             await axios.post(
-                "http://localhost:5000/projects",
+                // "http://localhost:5000/projects",
+                `${import.meta.env.VITE_API_URL}/projects`,
                 {
                 ...form,
                 tech_stack: form.tech_stack.split(","),
@@ -92,7 +95,8 @@ function ProjectsTab() {
 
     const handleDelete = async (id) => {
         try {
-        await axios.delete(`http://localhost:5000/projects/${id}`, {
+        // await axios.delete(`http://localhost:5000/projects/${id}`, {
+        await axios.delete(`${import.meta.env.VITE_API_URL}/projects/${id}`, {
             headers: {
             Authorization: `Bearer ${token}`,
             },
