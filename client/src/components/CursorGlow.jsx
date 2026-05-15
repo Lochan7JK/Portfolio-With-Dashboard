@@ -82,7 +82,7 @@ function CursorGlow() {
         transform: "translate(-50%, -50%)",
       }}
     >
-      <div className="w-40 h-40 bg-[#00ADB5] opacity-20 rounded-full blur-3xl" />
+      <div className="w-40 h-40 bg-primary opacity-20 rounded-full blur-3xl" />
     </div>
   );
 }
