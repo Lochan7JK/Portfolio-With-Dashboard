@@ -3,47 +3,15 @@ import axios from "axios";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 // import api from "../utils/apiToken";
-// const res = await api.get("/projects");
+// const res = await api.get("/contacts");
 
 dayjs.extend(relativeTime);
 
 export default function ContactTab({ contacts, setContacts, fetchContacts }) {
 
-  // WE COMMENTED OUT CONTACT STATE AND FETCH FUNCTION FROM THIS COMPONENT
-  // AND MOVED IT UP TO THE DASHBOARD COMPONENT TO GET RED NOTIFICATION ICON FUNCTIONALITY WORKING
-
-  // const [contacts, setContacts] = useState([]);
   const [selectedMessage, setSelectedMessage] = useState(null);
 
   const token = localStorage.getItem("token");
-
-//🔹 Fetch contacts 
-  // const fetchContacts = async () => {
-  //   try {
-
-  //     const res = await axios.get(
-  //       "http://localhost:5000/dashboard/contacts",
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       }
-  //     );
-
-  //     setContacts(res.data);
-
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
-//   Load contacts on contact tab
-  // useEffect(() => {
-  //   fetchContacts();
-  // }, []);
-
-
-
   // MARK READ
   const markAsRead = async (id) => {
     try {
@@ -185,29 +153,6 @@ export default function ContactTab({ contacts, setContacts, fetchContacts }) {
             <p className="text-gray-200 mt-4 whitespace-pre-wrap">
               <span className="text-gray-400 font-semibold">Message:</span> {c.message|| "Not Provided"}
             </p>
-
-
-
-            {/* ACTIONS */}
-            {/* <div className="flex gap-3 mt-5 flex-wrap">
-            
-              {!c.is_read && (
-                <button
-                  onClick={() => markAsRead(c.id)}
-                  className="bg-[#00ADB5] px-4 py-2 rounded-lg"
-                >
-                  Mark Read
-                </button>
-              )}
-
-
-              <a
-                href={`mailto:${c.email}`}
-                className="bg-[#333] px-4 py-2 rounded-lg"
-              >
-                Reply
-              </a>
-            </div> */}
 
           </div>
 
