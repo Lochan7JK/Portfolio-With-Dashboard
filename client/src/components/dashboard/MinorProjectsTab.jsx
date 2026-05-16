@@ -213,7 +213,6 @@ function MinorProjectsTab() {
 
                     <img
                         src={p.image_url}
-                        // className="w-40 rounded mb-3"
                         className="w-full md:w-52 h-40 object-cover rounded-xl flex-shrink-0"
                     />
                     
