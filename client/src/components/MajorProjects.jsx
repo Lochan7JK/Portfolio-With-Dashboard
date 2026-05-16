@@ -1,38 +1,10 @@
+// src/components/MajorProjects.jsx
+
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-
-// const projects = [
-//   {
-//     title: "Book Notes App",
-//     desc: "Developed a scalable and user-centric PERN stack application for tracking and managing book notes, featuring CRUD operations, structured PostgreSQL storage, and a responsive React UI for seamless user interaction.",
-//     tech_stack: ["PostgreSQL", "Express", "React", "Node"],
-//     image_url: "src/assets/image_urls/book-notes.png",
-//     live_url: "https://book-notes-app-render-frontend.onrender.com/",
-//     github_url: "https://github_url.com/Lochan7JK/Book-Notes-App",
-//   },
-//   {
-//     title: "Personal Portfolio",
-//     desc: "Engineered a dynamic portfolio platform with React and Tailwind CSS, featuring advanced UI interactions and developed a scalable dashboard system for content management and analytics.",
-//     impact: "Architecting a custom admin dashboard to enable dynamic content management, project updates, and analytics without code changes.",
-//     tech_stack: ["React", "Node", "Express", "PostgreSQL"],
-//     image_url: "src/assets/image_urls/portfolio.png",
-//     live_url: "#",
-//     github_url: "#",
-//   },
-//   {
-//     title: "Event Planning Website",
-//     desc: "Contributed to the development of a scalable full-stack event management platform using MongoDB, Express, React, and Node.js, enabling users to browse, create, and manage events with real-time data handling.",
-//     impact: "Reduced operational complexity by centralizing event management processes into a single, scalable system.",
-//     tech_stack: ["MERN Stack"],
-//     image_url: "src/assets/image_urls/be.png",
-//     live_url: "https://blessedevents.netlify.app/",
-//     github_url: "",
-//   }
-// ];
-
 
 function MajorProjects() {
 
@@ -55,10 +27,6 @@ function MajorProjects() {
   return (
     <section className="relative z-10 py-16 md:py-24 px-4 md:px-10 ml-5 mr-5">
       
-      {/* <h1 className="text-white text-3xl text-center mb-20">
-        Major Projects
-      </h1> */}
-      
 
       {projects.map((project, index) => (
         <div
@@ -71,7 +39,6 @@ function MajorProjects() {
 
         {/* LEFT SIDE */}
             <div className="md:sticky md:top-32 self-start pl-20 pb-20">
-                {/* text-center md:text-left flex flex-wrap justify-center md:justify-start gap-2 */}
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -115,25 +82,6 @@ function MajorProjects() {
             </div>
           </div>
 
-
-        {/* RIGHT SIDE */}
-          {/* <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="flex justify-center md:justify-start gap-2"
-           > */}
-            {/* <img
-              src={project.image_url}
-              alt={project.title}
-              className="rounded-xl shadow-[0_0_40px_rgba(0,173,181,0.3)] hover:scale-105 transition duration-500"
-            /> */}
-            {/* <img
-                src={project.image_url}
-                alt={project.title}
-                className="w-full max-w-[500px] mx-auto md:max-w-[600px] rounded-xl shadow-[0_0_40px_rgba(0,173,181,0.3)] hover:scale-105 transition duration-500"
-            />
-          </motion.div> */}
 
         <Tilt
             tiltMaxAngleX={15}
