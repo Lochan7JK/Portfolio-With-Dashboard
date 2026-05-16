@@ -10,9 +10,6 @@ import MusicToggle from "../components/MusicToggle";
 import ParticlesBg from "../components/ParticlesBg";
 import CursorGlow from "../components/CursorGlow";
 import FloatingSocials from "../components/FloatingSocials";
-// import FloatingShapes from "../components/FloatingShapes";
-// import ScrollToTop from "../components/ScrollToTop";
-// import ExampleProjects from "../components/ExampleProjects";
 import ScrollIndicator from "../components/ScrollIndicator";
 
 import { useEffect, useState } from "react";
@@ -55,16 +52,6 @@ function Home() {
             value: { min: 1, max: 2 }, // 🔥 smaller dots
           },
         },
-        // detectRetina: true,
-        // interactivity: {
-  
-        //   events: {
-        //     onHover: {
-        //       enable: !isMobile,
-        //       mode: "connect",
-        //     },
-        //   },
-        // }
 
         // ❌ IMPORTANT: completely disable interactivity
         interactivity: {
@@ -123,22 +110,6 @@ function Home() {
 
   return (
 
-    //  {/* <AnimatePresence mode="wait">
-    //     {loading ? (
-    //       <Loader key="loader" text={loaderText} />
-    //     ) : (
-    //       <motion.div
-    //         key="home"
-    //         initial={{ opacity: 0, scale: 0.98 }}
-    //         animate={{ opacity: 1, scale: 1 }}
-    //         transition={{ duration: 1, ease: "easeOut" }}
-    //       >
-            
-    //         <Home />
-    //       </motion.div>
-    //     )}
-    //   </AnimatePresence> */}
-
       <AnimatePresence mode="wait">
         {firstVisit ? (
 
@@ -166,11 +137,7 @@ function Home() {
             transition={{ duration: 1, ease: "easeOut" }}
           >
 
-            {/* Your App */}
-            {/* <Home /> */}
-
             <div className="relative">
-              {/* <FloatingShapes /> */}
               <FloatingSocials />
               <CursorGlow />
 
@@ -178,19 +145,13 @@ function Home() {
               <ParticlesBg options={globalParticles} fullScreen={true} />
 
               <ScrollIndicator />
-
-              {/* <Example /> */}
               <Hero />
               <Navbar />
               <About />
               <Projects />
-              {/* <ExampleProjects /> */}
               <Contact />
-
               <MusicToggle /> {/* 👈 floating button */}
-
               <Footer /> 
-              {/* <ScrollToTop /> */}
 
             </div>
 
