@@ -1,47 +1,4 @@
-// import { createContext, useEffect, useState } from "react";
-// import axios from "axios";
-
-// export const AuthContext = createContext();
-
-// export const AuthProvider = ({ children }) => {
-//    const [user, setUser] = useState(null);
-//    const [loading, setLoading] = useState(true);
-
-//     const fetchUser = async () => {
-//     const token = localStorage.getItem("token");
-
-//     if (!token) {
-//         setLoading(false);
-//         return;
-//     }
-
-//     try {
-//         const res = await axios.get("http://localhost:5000/auth/me", {
-//         headers: {
-//             Authorization: `Bearer ${token}`,
-//         },
-//         });
-
-//         setUser(res.data);
-//     } catch {
-//         localStorage.removeItem("token");
-//         setUser(null);
-//     } finally {
-//         setLoading(false);
-//     }
-//     };
-
-//     useEffect(() => {
-//         fetchUser();
-//     }, []);
-
-//   return (
-//     <AuthContext.Provider value={{ user, setUser }}>
-//       {children}
-//     </AuthContext.Provider>
-//   );
-// };
-
+// src/context/AuthContext.jsx
 
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
@@ -50,7 +7,7 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true); // 🔥 important
+  const [loading, setLoading] = useState(true); // important
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -75,7 +32,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem("token");
         setUser(null);
       } finally {
-        setLoading(false); // 🔥 critical
+        setLoading(false); // critical
       }
     };
 
