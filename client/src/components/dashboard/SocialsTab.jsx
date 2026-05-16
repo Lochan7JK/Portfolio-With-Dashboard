@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+// import api from "../utils/apiToken";
+// const res = await api.get("/projects");
 
 function SocialsTab() {
     const [socials, setSocials] = useState([]);
