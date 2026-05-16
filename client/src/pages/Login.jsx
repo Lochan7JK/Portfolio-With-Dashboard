@@ -1,4 +1,4 @@
-// Login.jsx
+// src/pages/Login.jsx
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -60,28 +60,6 @@ export default function Login() {
     }
   };
 
-  // const login = useGoogleLogin({
-  //   onSuccess: async (tokenResponse) => {
-  //     try {
-  //       const res = await axios.post(
-  //         "http://localhost:5000/auth/google",
-  //         {
-  //           access_token: tokenResponse.access_token,
-  //         }
-  //       );
-
-  //       localStorage.setItem("token", res.data.token);
-
-  //       navigate("/dashboard");
-
-  //     } catch (err) {
-  //       console.log(err);
-  //       // alert("Google login failed");
-  //       toast.error("Google login failed ❌");
-  //     }
-  //   },
-  // });
-
 
   return (
     <div className="min-h-screen flex flex-col gap-5 items-center justify-center bg-[#191919] text-white">
@@ -105,13 +83,6 @@ export default function Login() {
           className="p-2 rounded bg-[#111] border border-gray-600"
           onChange={(e) => setEmail(e.target.value)}
         />
-
-        {/* <input
-          type="password"
-          placeholder="Password"
-          className="p-2 rounded bg-[#111] border border-gray-600"
-          onChange={(e) => setPassword(e.target.value)}
-        /> */}
 
         <div className="relative">
             <input
@@ -147,27 +118,6 @@ export default function Login() {
             width="312"
           />
         </div>
-
-        {/* <button
-          type="button"
-          onClick={() => login()}
-          className="
-            flex items-center justify-center gap-3
-            w-78 py-3 rounded-xl
-            bg-white/5 border border-white/10
-            hover:border-primary
-            hover:bg-primary/10
-            transition-all duration-300
-            text-white font-medium
-            group
-          "
-        >
-          <FcGoogle className="text-2xl group-hover:scale-110 transition" />
-
-          <span>
-            Sign in with Google
-          </span>
-        </button> */}
 
     </div>
   );
