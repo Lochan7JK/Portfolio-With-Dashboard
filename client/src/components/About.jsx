@@ -1,24 +1,9 @@
 // src/components/About.jsx
 
 import SkillCard from "./SkillCard";
-
-// import images
-// import html from "../assets/images/html.png";
-// import css from "../assets/images/css.png";
-// import js from "../assets/images/js.png";
-// import mongodb from "../assets/images/mongodb.png";
-// import express from "../assets/images/espressjs.png";
-// import react from "../assets/images/react.png";
-// import node from "../assets/images/nodejs.png";
-// import c from "../assets/images/c.png";
-// import cpp from "../assets/images/cpp.png";
-// import java from "../assets/images/java.png";
-// import postgresql from "../assets/images/postgresql.png";
 import { motion } from "framer-motion";
-
 import { useEffect, useState } from "react";
 import axios from "axios";
-
 
 function About() {
 
@@ -42,21 +27,7 @@ function About() {
 
   return (
     <div className="relative z-10 min-h-screen py-10 px-5" id="about-section">
-      {/* bg-[#222831] */}
-
-    {/* // <motion.div
-    //   id="about-section"
-    //   initial={{ opacity: 0, y: 80 }}
-    //   whileInView={{ opacity: 1, y: 0 }}
-    //   transition={{ duration: 0.6 }}
-    //   viewport={{ once: true }}
-    //   className="bg-[#222831] min-h-screen py-10 px-5"
-    // > */}
       
-      {/* Heading */}
-      {/* <h1 className="text-[#EEEEEE] text-3xl text-center mt-10 mb-10 font-poppins">
-        About
-      </h1> */}
     <div className="text-center mb-12">
       <h1 className="text-4xl font-bold font-inter text-white relative inline-block">
         About
@@ -68,7 +39,6 @@ function About() {
     </div>
 
       {/* Main Grid */}
-      {/* <div className="grid md:grid-cols-2 gap-10 items-center"> */}
       <motion.div
         variants={{
           hidden: {},
@@ -83,25 +53,7 @@ function About() {
         // animate="visible" //on loading/refreshing it'll trigger animation 
         className="grid md:grid-cols-2 gap-10 items-center"
       >
-
-        {/* Left: About Me */}
-        {/* <div className="flex flex-col items-center text-center gap-4 mt-10"> */}
-
-        {/* <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          className="flex flex-col items-center text-center gap-4 mt-10"
-        > */}
-
-        {/* <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col items-center text-center gap-4 mt-10"
-        > */}
-
+      
         <motion.div
           variants={{
             hidden: { x: -120, opacity: 0 },
@@ -119,16 +71,6 @@ function About() {
           className="flex flex-col items-center text-center gap-4 mt-10"
         >
           
-          {/* Icon */}
-          {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-[#EEEEEE] w-32 h-32"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-          </svg> */}
-
           <svg
             width="180"
             height="180"
@@ -174,18 +116,6 @@ function About() {
             </p>
           ))}
 
-          {/* <p className="text-[#EEEEEE] text-sm md:text-base font-poppins max-w-md">
-            // My core strengths lie in Java, OOPs, and Data Structures & Algorithms, which help me write optimized and maintainable code. I also have experience with MySQL, Postman, and foundational knowledge of C and C++.
-            {about.description}
-          </p> */}
-
-          {/* <p className="text-[#EEEEEE] text-sm md:text-base font-poppins max-w-md"> */}
-            {/* Beyond coding, I’m a lifelong learner, a problem solver and always a curious mind.  */}
-            {/* Always learning. Always building. Always improving. */}
-            {/* So yeah, let's connect and build something cool together! */}
-          {/* </p> */}
-
-
           {/* Button */}
           <a
             // href="/resume.pdf"   // or your hosted resume link
@@ -198,25 +128,6 @@ function About() {
             </button>
             </a>
         </motion.div>
-
-        {/* Right: Skills */}
-        {/* <div className="flex justify-center items-start gap-6 mt-15"> */}
-
-        {/* <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="flex justify-center items-start gap-6 mt-15"
-        > */}
-
-        {/* <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="flex justify-center items-start gap-6 mt-15"
-        > */}
 
         <motion.div
           variants={{
@@ -232,7 +143,7 @@ function About() {
         >
         
             {/* Column 1 (gap-4 w-1/4) */}
-            <div className="flex flex-col gap-6 w-30 mt-14">
+            <div className="flex flex-col gap-6 w-30 mt-27">
               {/* image={html} */}
                 <SkillCard image="/images/html.png" name="HTML"  delay={0.2}/>
                 <SkillCard image="/images/css.png" name="CSS" delay={0.8}/>
@@ -248,7 +159,7 @@ function About() {
             </div>
 
             {/* Column 3 */}
-            <div className="flex flex-col gap-6 w-30 mt-14">
+            <div className="flex flex-col gap-6 w-30 mt-27">
                 <SkillCard image="/images/cpp.png" name="C++" delay={0.5}/>
                 <SkillCard image="/images/java.png" name="JAVA" delay={1.1}/>
                 <SkillCard image="/images/postgresql.png" name="POSTGRESQL" delay={0.7}/>
