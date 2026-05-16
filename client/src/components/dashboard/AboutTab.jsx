@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 // import api from "../utils/apiToken";
-// const res = await api.get("/projects");
+// const res = await api.get("/about");
 
 function AboutTab() {
 
