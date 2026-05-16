@@ -1,4 +1,4 @@
-// Dashboard.jsx
+// src/pages/Dashboard.jsx
 
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -17,215 +17,13 @@ import AnalyticsTab from "../components/dashboard/AnalyticsTab";
 
 export default function Dashboard() {
 
-  const navigate = useNavigate();
-
-//   const [projects, setProjects] = useState([]);
-//   const [editingId, setEditingId] = useState(null);
-  const [activeTab, setActiveTab] = useState("contact");
-//   const [minorProjects, setMinorProjects] = useState([]);
-
-  const [contacts, setContacts] = useState([]);
-//   const [selectedMessage, setSelectedMessage] = useState(null);
-
-//   const [editingMinorId, setEditingMinorId] = useState(null);
-
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-//   const [showMinorModal, setShowMinorModal] = useState(false);
-//   const [showMajorModal, setShowMajorModal] = useState(false);
-
-//   const [minorForm, setMinorForm] = useState({
-//       title: "",
-//       description: "",
-//       image_url: "",
-//       live_url: "",
-//   });
-
-
-//   const [form, setForm] = useState({
-//     title: "",
-//     description: "",
-//     tech_stack: "",
-//     github_url: "",
-//     live_url: "",
-//     image_url: "",
-//   });
-
-   
-  const token = localStorage.getItem("token");
-
-
-  // 🔹 Fetch practice projects 
-//   const fetchMinorProjects = async () => {
-//     try {
-//         const res = await axios.get("http://localhost:5000/minor-projects");
-//         setMinorProjects(res.data);
-//     } catch (err) {
-//         console.log(err);
-//     }
-//    };
-
-  // 🔹 Fetch projects 
-//   const fetchProjects = async () => {
-//     try {
-//       const res = await axios.get("http://localhost:5000/projects");
-//       setProjects(res.data);
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
-
-//    useEffect(() => {
-//         // fetchAbout();
-//         fetchMinorProjects();
-//         fetchProjects();
-//     }, []);
-
-
-
-//   const handleChange = (e) => {
-//     setForm({ ...form, [e.target.name]: e.target.value });
-//   };
-
-
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-
-    //     try {
-    //         if (editingId) {
-    //         // UPDATE
-    //         await axios.put(
-    //             `http://localhost:5000/projects/${editingId}`,
-    //             {
-    //             ...form,
-    //             tech_stack: form.tech_stack.split(","),
-    //             },
-    //             {
-    //             headers: {
-    //                 Authorization: `Bearer ${token}`,
-    //             },
-    //             }
-    //         );
-    //         } else {
-    //         // ADD
-    //         await axios.post(
-    //             "http://localhost:5000/projects",
-    //             {
-    //             ...form,
-    //             tech_stack: form.tech_stack.split(","),
-    //             },
-    //             {
-    //             headers: {
-    //                 Authorization: `Bearer ${token}`,
-    //             },
-    //             }
-    //         );
-    //         }
-
-    //         fetchProjects();
-    //         setEditingId(null);
-    //         setForm({
-    //             title: "",
-    //             description: "",
-    //             tech_stack: "",
-    //             github_url: "",
-    //             live_url: "",
-    //             image_url: "",
-    //         });
-    //     } catch (err) {
-    //         console.log(err);
-    //         alert(`Failed, please try again`);
-    //     }
-    // };
-
-
-//     const handleDelete = async (id) => {
-//     try {
-//       await axios.delete(`http://localhost:5000/projects/${id}`, {
-//         headers: {
-//           Authorization: `Bearer ${token}`,
-//         },
-//       });
-
-//       fetchProjects();
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
-
-
-
-//   const handleMinorChange = (e) => {
-//     setMinorForm({
-//         ...minorForm,
-//         [e.target.name]: e.target.value
-//     });
-//   };
-
-//   const handleMinorSubmit = async (e) => {
-//     e.preventDefault();
-
-//     try {
-//         if (editingMinorId) {
-
-//         await axios.put(
-//             `http://localhost:5000/minor-projects/${editingMinorId}`,
-//             minorForm,
-//             {
-//             headers: {
-//                 Authorization: `Bearer ${token}`
-//             }
-//             }
-//         );
-
-//         } else {
-
-//         await axios.post(
-//             "http://localhost:5000/minor-projects",
-//             minorForm,
-//             {
-//             headers: {
-//                 Authorization: `Bearer ${token}`
-//             }
-//             }
-//         );
-//         }
-
-//         fetchMinorProjects();
-
-//         setMinorForm({
-//             title: "",
-//             description: "",
-//             image_url: "",
-//             live_url: "",
-//         });
-
-//         setEditingMinorId(null);
-
-//     } catch (err) {
-//         console.log(err);
-//     }
-//   };
-
-
-//   const deleteMinorProject = async (id) => {
-//     try {
-//         await axios.delete(
-//         `http://localhost:5000/minor-projects/${id}`,
-//         {
-//             headers: {
-//             Authorization: `Bearer ${token}`
-//             }
-//         }
-//         );
-
-//         fetchMinorProjects();
-
-//     } catch (err) {
-//         console.log(err);
-//     }
-//   };
-
+    const navigate = useNavigate();
+    const [activeTab, setActiveTab] = useState("contact");
+    const [contacts, setContacts] = useState([]);
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+     
+    const token = localStorage.getItem("token");
+  
     const fetchContacts = async () => {
         try {
 
@@ -301,13 +99,8 @@ export default function Dashboard() {
         </div>
 
         <div className="p-6 flex flex-col h-full">
-            {/* <h1 className="text-2xl font-bold mb-10">
-            Admin Panel
-            </h1> */}
-
             <div className="flex flex-col gap-3">
                 <button
-                    // onClick={() => setActiveTab("contact")}
                     onClick={() => {
                         setActiveTab("analytics")
                         setSidebarOpen(false);
@@ -315,7 +108,6 @@ export default function Dashboard() {
                     className={`relative text-left px-4 py-3 rounded-lg transition ${
                         activeTab === "analytics"
                         ? "text-white"
-                        // : "hover:bg-white/10"
                         : "text-white"
                     }`}
                     >
@@ -403,7 +195,6 @@ export default function Dashboard() {
 
 
                 <button
-                    // onClick={() => setActiveTab("contact")}
                     onClick={() => {
                         setActiveTab("socials")
                         setSidebarOpen(false);
@@ -429,16 +220,6 @@ export default function Dashboard() {
 
         </div>
         </aside>
-
-        
-        {/* SIDEBAR */}
-        {/* <div className="w-full md:w-72 bg-[#111] p-5 flex md:flex-col gap-4 overflow-x-auto">
-            <h2 className="text-xl font-bold mb-4 text-center">Admin Panel</h2>
-            <button className="hover:text-[#00ADB5]" onClick={() => setActiveTab("about")}>About</button>
-            <button className="hover:text-[#00ADB5]" onClick={() => setActiveTab("minor-projects")}>Practice Projects</button>
-            <button className="hover:text-[#00ADB5]" onClick={() => setActiveTab("projects")}>Projects</button>
-            <button className="hover:text-[#00ADB5]" onClick={() => setActiveTab("contact")}>Contact</button>
-        </div> */}
 
 
         {/* MAIN CONTENT */}
