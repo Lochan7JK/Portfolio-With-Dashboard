@@ -1,30 +1,5 @@
 // src/components/ProjectCard.jsx
 
-// function ProjectCard({ img, title, live }) {
-//   return (
-//     <div className="bg-[#EEEEEE] rounded-xl flex flex-col items-center justify-center p-5 shadow-md hover:scale-105 transition duration-300">
-
-//       <img
-//         src={img}
-//         alt={title}
-//         className="w-full max-w-[90%] rounded-lg"
-//       />
-
-//       <h5 className="mt-4 font-semibold">{title}</h5>
-
-//       <p className="text-sm text-gray-600">
-//         Using Something called brain...
-//       </p>
-
-//       <a href={live} target="_blank" rel="noopener noreferrer">
-//         <button className="mt-3 bg-[#00ADB5] text-white px-4 py-1 rounded-md hover:opacity-90">
-//           View
-//         </button>
-//       </a>
-//     </div>
-//   );
-// }
-
 import { motion } from "framer-motion";
 
 function ProjectCard({ img, title, description, live }) {
