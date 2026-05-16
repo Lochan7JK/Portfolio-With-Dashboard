@@ -94,10 +94,6 @@ function HeroTab() {
                 setHero({
                     ...hero,
                     roles: e.target.value.split(","),
-                    // roles: e.target.value
-                    // .split(",")
-                    // .map((r) => r.trim())
-                    // .filter(Boolean),
                 })
             }
             placeholder="Roles comma separated"
