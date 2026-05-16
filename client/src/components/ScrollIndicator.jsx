@@ -1,3 +1,5 @@
+// src/components/ScrollIndicator.jsx
+
 import { useEffect, useState } from "react";
 
 function ScrollIndicator() {
@@ -40,9 +42,7 @@ function ScrollIndicator() {
         style={{
           height: `${scrollY * 100}%`,
           background: "linear-gradient(to bottom, #AFFFFF, #00ADB5, #8B5CF6)",
-            // background: "linear-gradient(to bottom, #00ADB5, #AFFFFF)",
-        //   boxShadow: "0 0 10px #00ADB5",
-        boxShadow: "0 0 12px #00ADB5, 0 0 20px #00ADB5"
+          boxShadow: "0 0 12px #00ADB5, 0 0 20px #00ADB5"
         }}
       />
 
