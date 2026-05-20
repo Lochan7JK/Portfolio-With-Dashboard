@@ -26,9 +26,11 @@ app.use(
       "http://localhost:5173",
       "https://portfolio-with-dashboard-render-frontend.onrender.com",
     ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 
