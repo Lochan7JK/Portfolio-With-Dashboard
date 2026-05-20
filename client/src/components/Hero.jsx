@@ -122,17 +122,17 @@ useEffect(() => {
         <h1 className="text-white text-4xl md:text-6xl">
           Hello, I'm 
           <span className="text-[#AFFFFF] glow-text">
-            {/* Lochan */}
-            {hero?.name}
+             Lochan 
+            {/* {hero?.name} */}
           </span>
         {/* </h1> */}
         <span className="text-gray-500 text-sm md:text-lg mt-2 block">
-          {/* And I'm Not a Wizard or Chinese (I wish I were...) */}
-          {hero?.tagline1}
+           And I'm Not a Wizard or Chinese (I wish I were...) 
+          {/* {hero?.tagline1} */}
         </span>
         <span className="text-gray-500 text-sm md:text-lg block">
-          {/* But Definitely I'm */}
-          {hero?.tagline2}
+           But Definitely I'm 
+          {/* {hero?.tagline2} */}
         </span>
         </h1>
 
@@ -166,8 +166,8 @@ useEffect(() => {
           }}
         >
           <span className="relative z-10 group-hover:text-white transition">
-            {/* Summon Me */}
-            {hero?.cta_text}
+              Summon Me 
+            {/* {hero?.cta_text} */}
           </span>
 
           {/* Magnetic glow */}
