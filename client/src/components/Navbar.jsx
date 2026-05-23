@@ -46,9 +46,9 @@ function Navbar() {
   ];
 
   return (
-    <div className="w-full sticky top-0 z-35 backdrop-blur-md py-4 border-b border-black/20 shadow-lg
+    <div className="w-full overflow-x-hidden sticky top-0 z-35 backdrop-blur-md py-4 border-b border-black/20 shadow-lg
         bg-gradient-to-r from-[#0f172a]/80 via-[#111827]/70 to-[#272B31]/92">
-      
+
         <motion.div
             initial="hidden"
             animate="visible"
@@ -60,7 +60,7 @@ function Navbar() {
                 },
                 },
             }}
-            className="flex justify-center md:justify-end px-6 md:px-16 gap-8 md:gap-10 text-md md:text-lg font-semibold"
+            className="flex justify-center md:justify-end px-6 md:px-16 gap-8 md:gap-10 text-xs sm:text-base md:text-lg font-semibold"
         >
 
         {navItems.map((item, index) => (
@@ -83,11 +83,12 @@ function Navbar() {
                   : "text-white hover:text-primary"
               }
             `}
+
           >
             <span className="absolute right-3 bottom-0 w-0 h-[2px] text-xs bg-primary transition-all duration-300 group-hover:w-full">
                 {String(index + 1).padStart(2, "0")}
             </span>
-
+            
             {item.label}
 
             {/* Underline */}
@@ -110,4 +111,5 @@ function Navbar() {
   );
 }
 
+export default Navbar;
 export default Navbar;
