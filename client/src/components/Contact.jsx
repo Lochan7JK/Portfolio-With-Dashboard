@@ -46,6 +46,11 @@ function Contact() {
     if (form.phone && !/^[0-9]{10}$/.test(form.phone)) {
         newErrors.phone = "Enter valid 10 digit number";
     }
+    // if (!form.phone) {
+    //   newErrors.phone = "Phone no. is required";
+    // } else if (!/^[0-9]{10}$/.test(form.phone)) {
+    //   newErrors.phone = "Enter valid 10 digit number";
+    // }
 
     // Email
     if (!form.email) {
@@ -63,6 +68,7 @@ function Contact() {
 
     return newErrors;
   };
+  
 
   //Submit handler frontend integration with backend
   const handleSubmit = async (e) => {
@@ -121,8 +127,9 @@ function Contact() {
 
 
   return (
-    <div className="relative z-10 min-h-screen py-10 px-5" id="contact-section">
+    <div className="w-full overflow-x-hidden relative z-10 min-h-screen py-10 px-5" id="contact-section">
 
+      {/* Heading before: font-chakra*/}
       <div className="text-center mb-8 mt-10">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold font-inter text-white relative inline-block">
@@ -134,7 +141,7 @@ function Contact() {
           </h1>
         </div>
 
-        <p className="text-light font-poppins -mt-4">
+        <p className="text-light font-poppins -mt-4 text-sm sm:text-base">
           Have any question? Want to work together? Drop me a query or Leave your message.
         </p>
       </div>
@@ -147,7 +154,9 @@ function Contact() {
         >
           {/* Icon */}
           <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-full shadow-md text-primary hover:text-primary/85 text-2xl">
+          {/* text-[#009e7a] */}
              <i class="fas fa-paper-plane"></i>
+             {/* ✈️ */}
           </div>
 
           {/* Name */}
