@@ -3,15 +3,15 @@ import axios from "axios";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 // import api from "../utils/apiToken";
-// const res = await api.get("/contacts");
+// const res = await api.get("/projects");
 
 dayjs.extend(relativeTime);
 
 export default function ContactTab({ contacts, setContacts, fetchContacts }) {
-
   const [selectedMessage, setSelectedMessage] = useState(null);
 
   const token = localStorage.getItem("token");
+
   // MARK READ
   const markAsRead = async (id) => {
     try {
@@ -70,13 +70,13 @@ export default function ContactTab({ contacts, setContacts, fetchContacts }) {
     <div>
 
       {/* HEADER */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6">
 
         <h1 className="text-3xl mb-6 font-semibold">
           Inbox
         </h1>
 
-        <div className="bg-[#00ADB5] text-white px-4 py-2 rounded-xl">
+        <div className="bg-[#00ADB5] text-white px-4 py-2 rounded-xl text-xs w-fit">
           🔔 {unreadCount} new messages
         </div>
 
@@ -92,7 +92,7 @@ export default function ContactTab({ contacts, setContacts, fetchContacts }) {
           <div
             key={c.id}
             onClick={() => setSelectedMessage(c)}
-            className={`rounded-2xl cursor-pointer p-5 border transition hover:scale-[1.01] ${
+            className={`rounded-2xl cursor-pointer p-4 sm:p-5 border transition sm:hover:scale-[1.01] ${
               !c.is_read
                 ? "bg-[#00ADB5]/10 border-[#00ADB5]/40"
                 : "bg-[#222] border-white/5"
@@ -100,7 +100,7 @@ export default function ContactTab({ contacts, setContacts, fetchContacts }) {
           >
 
             {/* TOP */}
-            <div className="flex justify-between items-start gap-4">
+            <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
 
               <div>
                 <h2 className="text-lg font-semibold">
