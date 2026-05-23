@@ -58,13 +58,13 @@ useEffect(() => {
             density: { enable: true },
           },
           color: {
-            value: ["#00ADB5", "#AFFFFF"], //  multi-color 
+            value: ["#00ADB5", "#AFFFFF"], // 🔥 multi-color 
           },
           links: {
             enable: false, // ❌ disable default connections
             distance: 120, // closer = more connections
             color: "#00ADB5",
-            opacity: 0.5, //  increase visibility
+            opacity: 0.5, // 🔥 increase visibility
             width: 1,
           },
           move: {
@@ -75,7 +75,7 @@ useEffect(() => {
             value: 0.5,
           },
           size: {
-            value: { min: 1, max: 2 }, //  smaller dots
+            value: { min: 1, max: 2 }, // 🔥 smaller dots
           },
         },
         interactivity: {
@@ -85,15 +85,22 @@ useEffect(() => {
                 // enable: true,
                 enable: !isMobile, // ❌ disable on mobile
                 // mode: "grab",
-                mode: "connect", //  ONLY on hover
-                parallax: { enable: true, smooth: 1000 }, //  smooth motion feel
+                mode: "connect", // 🔥 ONLY on hover
+                parallax: { enable: true, smooth: 1000 }, // 🔥 smooth motion feel
             },
           },
           modes: {
+            // grab: {
+            //   distance: 180,
+            //   links: {
+            //     opacity: 1,
+            //   },
+            // },
+
             connect: {
                 distance: 100,
                 links: {
-                    opacity: 0.15, //  faded edges 
+                    opacity: 0.15, // 🔥 faded edges (your requirement)
                 },
                 radius: 350,
             },
@@ -112,33 +119,67 @@ useEffect(() => {
 
 
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden isolate" id="home">
+    <div className="w-full overflow-x-hidden relative h-screen flex items-center justify-center overflow-hidden isolate" id="home">
      
      {/* ONLY HERO PARTICLES */}
       <ParticlesBg options={heroParticles} />
 
       {/* Content */}
       <div className="text-center z-10 relative px-4">
-        <h1 className="text-white text-4xl md:text-6xl">
+        <h1 className="text-white text-4xl md:text-5xl lg:text-6xl">
           Hello, I'm 
           <span className="text-[#AFFFFF] glow-text">
-             {/*   Lochan  */}
-              {hero?.name} 
+            {/* Lochan */}
+            {hero?.name}
           </span>
         {/* </h1> */}
         <span className="text-gray-500 text-sm md:text-lg mt-2 block">
-           {/* And I'm Not a Wizard or Chinese (I wish I were...)  */}
-           {hero?.tagline1}
+          {/* And I'm Not a Wizard or Chinese (I wish I were...) */}
+          {hero?.tagline1}
         </span>
         <span className="text-gray-500 text-sm md:text-lg block">
-           {/* But Definitely I'm  */}
-          {hero?.tagline2} 
+          {/* But Definitely I'm */}
+          {hero?.tagline2}
         </span>
         </h1>
 
+
+        {/* {hero?.roles?.length > 0 && ( */}
         {sequence.length > 0 && (
 
             <TypeAnimation
+            // WORKING BUT STATIC ✅
+            // sequence={[
+            //   "A Full Stack Web Developer",
+            //   2000,
+            //   "A Problem Solver",
+            //   2000,
+            //   "An Optimist",
+            //   2000,
+            //   "A Melophile and Zoophile",
+            //   2000,
+            //   "A Swimmer",
+            //   2000,
+            //   "A Lifelong Learner",
+            //   2000,
+            // ]} 
+
+            //FAILED ❌
+            // sequence={
+            //   hero?.roles
+            //     ? hero.roles.flatMap((role) => [role, 2000])
+            //     : []
+            // } 
+
+            // sequence={typeSequence} //FAILED ❌
+
+            // WORKING AND DYNAMIC✅ 
+            // sequence={hero.roles.flatMap((role) => [
+            //     role,
+            //     2000,
+            // ])}
+
+            // OPTIMIZED ABOVE WORKING CODE ✅
             sequence={sequence}
 
             wrapper="span"
@@ -149,6 +190,7 @@ useEffect(() => {
           />
 
         )}
+
         
         <button
           className="mt-6 px-6 py-3 border border-[#AFFFFF]/70 hover:border-[#00ADB5] text-white/90 rounded-md relative overflow-hidden group"
@@ -166,8 +208,8 @@ useEffect(() => {
           }}
         >
           <span className="relative z-10 group-hover:text-white transition">
-              {/* Summon Me  */}
-             {hero?.cta_text}
+            {/* Summon Me */}
+            {hero?.cta_text}
           </span>
 
           {/* Magnetic glow */}
