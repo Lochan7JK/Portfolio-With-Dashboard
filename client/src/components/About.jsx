@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+
 function About() {
 
   const [about, setAbout] = useState(null);
@@ -26,8 +27,8 @@ function About() {
   if (!about) return null;
 
   return (
-    <div className="relative z-10 min-h-screen py-10 px-5" id="about-section">
-      
+    <div className="w-full overflow-x-hidden relative z-10 min-h-screen py-10 px-5" id="about-section">
+
     <div className="text-center mb-12">
       <h1 className="text-4xl font-bold font-inter text-white relative inline-block">
         About
@@ -51,9 +52,11 @@ function About() {
         initial="hidden"
         whileInView="visible" //on scrolling it'll trigger animation 
         // animate="visible" //on loading/refreshing it'll trigger animation 
-        className="grid md:grid-cols-2 gap-10 items-center"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mx-w-6xl mx-auto"
       >
-      
+
+        {/* Left: About Me */}
         <motion.div
           variants={{
             hidden: { x: -120, opacity: 0 },
@@ -70,7 +73,8 @@ function About() {
           animate={{ x: 0, opacity: 1 }}
           className="flex flex-col items-center text-center gap-4 mt-10"
         >
-          
+ 
+
           <svg
             width="180"
             height="180"
@@ -105,45 +109,46 @@ function About() {
           </svg>
 
           {/* Text before: font-chakra*/}
-          <p className="text-light text-sm md:text-base font-poppins max-w-md">
+          <p className="text-light text-xs sm:text-sm md:text-base font-poppins max-w-md">
             {/* I’m a full-stack developer skilled in MERN and PERN stacks, passionate about building responsive and efficient web applications. */}
             {about.intro}
           </p>
 
           {about.description.split("\n").map((line, i) => (
-            <p key={i} className="text-light text-sm md:text-base font-poppins max-w-md">
+            <p key={i} className="text-light text-xs sm:text-sm md:text-base font-poppins max-w-md">
               {line}
             </p>
           ))}
 
+
           {/* Button */}
           <a
-            // href="/resume.pdf"   // or your hosted resume link
             href={about.resume_url}
             target="_blank"
             rel="noopener noreferrer"
             >
-            <button className="bg-primary text-white/90 rounded-md hover:opacity-80 px-5 py-3 mt-1">
+            <button className="bg-primary text-white/90 rounded-md hover:opacity-80 text-sm sm:text-base px-4 py-2 mt-1">
                 View Resume
             </button>
             </a>
         </motion.div>
 
+        {/* Right: Skills */}
         <motion.div
           variants={{
             hidden: {},
             visible: {
               transition: {
                 staggerChildren: 0.2,
-                delayChildren: 0.3, // 👈 starts after left finishes
+                delayChildren: 0.5, // 👈 starts after left finishes
               },
             },
           }}
-          className="flex justify-center items-start gap-6 mt-15"
+          className="flex justify-center items-start gap-6"
         >
         
             {/* Column 1 (gap-4 w-1/4) */}
-            <div className="flex flex-col gap-6 w-30 mt-27">
+            <div className="flex flex-col gap-6 w-25 sm:w-27 md:w-30 mt-27">
               {/* image={html} */}
                 <SkillCard image="/images/html.png" name="HTML"  delay={0.2}/>
                 <SkillCard image="/images/css.png" name="CSS" delay={0.8}/>
@@ -151,7 +156,7 @@ function About() {
             </div>
 
             {/* Column 2 */}
-            <div className="flex flex-col gap-6 w-30 mt-14">
+            <div className="flex flex-col gap-6 w-25 sm:w-27 md:w-30 mt-14">
                 <SkillCard image="/images/mongodb.png" name="MONGODB" delay={0.6}/>
                 <SkillCard image="/images/espressjs.png" name="EXPRESS.JS" delay={1.0}/>
                 <SkillCard image="/images/react.png" name="REACT" delay={0.3}/>
@@ -159,7 +164,7 @@ function About() {
             </div>
 
             {/* Column 3 */}
-            <div className="flex flex-col gap-6 w-30 mt-27">
+            <div className="flex flex-col gap-6 w-25 sm:w-27 md:w-30 mt-27">
                 <SkillCard image="/images/cpp.png" name="C++" delay={0.5}/>
                 <SkillCard image="/images/java.png" name="JAVA" delay={1.1}/>
                 <SkillCard image="/images/postgresql.png" name="POSTGRESQL" delay={0.7}/>
