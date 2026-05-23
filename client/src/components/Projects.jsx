@@ -38,14 +38,22 @@ function Projects() {
     fetchProjects();
   }, []);
 
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="relative z-10 py-10 px-5" id="project-section"
+      className="w-full relative z-10 py-10 px-5" id="project-section"
     >
+      {/* bg-[#222831] */}
+
+
+      {/* Heading */}
+      {/* <h1 className="text-[#EEEEEE] text-3xl text-center mt-10 mb-10 font-poppins">
+        Projects
+      </h1> */}
 
       <div className="text-center mb-8 mt-10">
         <div className="text-center mb-12">
@@ -58,9 +66,10 @@ function Projects() {
           </h1>
         </div>
       </div>
-      
- 
+
+
       <div className="max-w-6xl mx-auto px-4 py-4 text-center">
+            {/* <h1 className="text-lg text-left text-white mb-1">Minor Projects</h1> */}
             {projects?.length > 0 && (
             <Swiper
                 effect={'coverflow'}
@@ -137,7 +146,7 @@ function Projects() {
 
 
       {/* Footer Text */}
-      <h4 className="text-gray-100 text-right font-poppins">
+      <h4 className="text-gray-600 text-right font-poppins">
         To be continued...
       </h4>
     </motion.div>
